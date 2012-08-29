@@ -1,4 +1,14 @@
 Twitter::Application.routes.draw do
+
+  devise_for :users
+
+  resources :tweets
+
+  resources :followings
+  resources :users
+
+  root :to => "tweets#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

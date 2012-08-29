@@ -1,0 +1,20 @@
+%h1 Welcome to GoalBook Twitter
+%ul.nav.nav-list
+  %li.divider
+
+.row
+  .span5
+    %p
+      =@user.email
+      = form_for new_tweet_path(parmas[user_id = @user.id]) do |f|
+        Tweet
+
+
+%ul.nav.nav-list
+  %li.divider
+.row
+  .span2
+    %h2 Tweets
+%table.table.table-striped
+  %th
+    %tr
